@@ -41,7 +41,7 @@ def informationForFiles(path, name):
     byteArrArchive = ReadBinary(path)
     base64_bytes = base64encode(byteArrArchive)
     b = bytearray()
-   # b.extend(map(ord, base64_bytes))
+    b.extend(map(ord, base64_bytes))
     freqList = countFrequency(b)
     countEntropy(freqList, b)
 

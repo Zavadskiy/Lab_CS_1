@@ -18,6 +18,7 @@ def OutputTheResultsForFile(path):
     print('Default realization')
     msgbyte = text.encode('UTF-8')
     base64_bytes = base64.b64encode(msgbyte)
+
     print(f'\n{base64_bytes}\n')
 
     print('\nMy realization FOR(Archives)\n')
@@ -55,7 +56,7 @@ def base64encode(s):
 
 def Read(path):
     if not os.path.exists(path):
-      #  print("File not exist")
+        print("File not exist")
         return
     arr = []
     with open(path, "rb") as f:
@@ -65,7 +66,7 @@ def Read(path):
 
 def ReadFile(path):
     if not os.path.exists(path):
-        #print("File not exist")
+        print("File not exist")
         return
 
     with open(path, "r", encoding='utf-8') as f:
